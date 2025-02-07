@@ -116,16 +116,3 @@ document.onmousewheel = function(e) {
   radius += d;
   init(1);
 };
-let dragContainer = document.getElementById("drag-container");
-let startX, startY, initialX, initialY, dragging = false;
-
-dragContainer.addEventListener("mousedown", startDrag);
-dragContainer.addEventListener("mousemove", drag);
-dragContainer.addEventListener("mouseup", stopDrag);
-dragContainer.addEventListener("mouseleave", stopDrag);
-
-// Touch Events
-dragContainer.addEventListener("touchstart", startDrag);
-dragContainer.addEventListener("touchmove", drag);
-dragContainer.addEventListener("touchend", stopDrag);
-
