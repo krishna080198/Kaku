@@ -6,7 +6,7 @@
 .header {
   display: flex;
   justify-content: space-between; /* Aligns items at both ends */
-  align-items: left;
+  align-items: left-middel;
   padding: 10px 20px;
 }
 
