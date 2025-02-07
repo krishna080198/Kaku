@@ -2,43 +2,6 @@
   margin: 0;
   padding: 0;
 }
-/* Header Styling */
-.header {
-  display: flex;
-  justify-content: space-between; /* Aligns items at both ends */
-  align-items: flex-end;
-  padding: 20px 20px;
-}
-
-.header p {
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  margin: 0;
-}
-
-.header span {
-  color: red;
-  animation: heartbeat 1.5s infinite;
-}
-
-.header a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.header a:hover {
-  text-decoration: underline;
-}
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
 
 html,
 body {
@@ -58,6 +21,35 @@ body {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between; /* Aligns items at both ends */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  margin: 0;
+}
+
+.header span {
+  color: red;
+  animation: heartbeat 1.5s infinite;
+}
+
+.header a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
 
 #drag-container, #spin-container {
   position: relative;
@@ -157,92 +149,3 @@ body {
             transform: rotateY(0deg);
   }
 }
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
-html, body {
-  height: 100%;
-  touch-action: none; /* for touch screens */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #111;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-
-/* Header Styling */
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  text-align: center;
-  font-size: 16px;
-  color: white;
-}
-
-.header span {
-  color: red;
-  animation: heartbeat 1.5s infinite;
-}
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-/* 3D Rotating Container */
-#drag-container, #spin-container {
-  position: relative;
-  display: flex;
-  margin: auto;
-  transform-style: preserve-3d;
-  transform: rotateX(-10deg);
-}
-
-#drag-container img, #drag-container video {
-  transform-style: preserve-3d;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  box-shadow: 0 0 8px #fff;
-}
-
-#drag-container p {
-  font-family: Serif;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%,-50%) rotateX(90deg);
-  color: #fff;
-  text-align: center;
-  font-size: 18px;
-}
-
-#ground {
-  width: 90vw;
-  height: 90vw;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%,-50%) rotateX(90deg);
-  background: radial-gradient(circle, rgba(153,153,153,0.2) 0%, transparent 70%);
-}
-
-
-
-
