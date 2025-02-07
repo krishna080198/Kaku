@@ -129,36 +129,3 @@ dragContainer.addEventListener("touchstart", startDrag);
 dragContainer.addEventListener("touchmove", drag);
 dragContainer.addEventListener("touchend", stopDrag);
 
-function startDrag(event) {
-    event.preventDefault();
-    dragging = true;
-    
-    if (event.type === "touchstart") {
-        startX = event.touches[0].clientX;
-        startY = event.touches[0].clientY;
-    } else {
-        startX = event.clientX;
-        startY = event.clientY;
-    }
-
-    initialX = dragContainer.style.transform ? parseInt(dragContainer.style.transform.replace(/[^\d.-]/g, '')) : 0;
-}
-
-function drag(event) {
-    if (!dragging) return;
-    
-    let moveX, moveY;
-    if (event.type === "touchmove") {
-        moveX = event.touches[0].clientX - startX;
-        moveY = event.touches[0].clientY - startY;
-    } else {
-        moveX = event.clientX - startX;
-        moveY = event.clientY - startY;
-    }
-
-    dragContainer.style.transform = `rotateY(${initialX + moveX / 2}deg) rotateX(${moveY / 2}deg)`;
-}
-
-function stopDrag() {
-    dragging = false;
-}
