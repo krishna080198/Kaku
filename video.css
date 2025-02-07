@@ -259,19 +259,5 @@ html, body {
   }
 }
 
-@media (max-width: 480px) {
-  #drag-container img, #drag-container video {
-    max-width: 150px;
-  }
-  
-  .header {
-    font-size: 12px;
-    padding: 5px;
-  }
-  
-  #drag-container p {
-    font-size: 12px;
-  }
-}
 
 
